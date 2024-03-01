@@ -6,15 +6,30 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { FormsModule } from '@angular/forms';
+import { PostComponent } from './post/post.component';
+
+import { MatCardModule } from '@angular/material/card'
+import { MatExpansionModule } from '@angular/material/expansion'
+import { MatButtonModule } from '@angular/material/button'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import { PostlistComponent } from './post/postlist/postlist.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostComponent,
+    PostlistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
     provideAnimationsAsync('noop')

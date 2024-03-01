@@ -1,0 +1,31 @@
+<div class="h-screen w-full flex flex-col bg-slate-600 py-8">
+  <div class="flex flex-row h-full w-full">
+    <div class="h-full w-45pct mx-auto">
+      <mat-card class="w-full m-auto h-96 mx-auto">
+        <mat-card-title>What's your secret?</mat-card-title>
+        <mat-card-content>
+          <mat-form-field class="w-full h-full">
+            <textarea
+              matInput
+              rows="10"
+              [(ngModel)]="binding"
+              class="box-border"
+            ></textarea>
+          </mat-form-field>
+        </mat-card-content>
+      </mat-card>
+
+      <button
+        mat-raised-button
+        color="primary"
+        class="relative top-20 mx-auto h-16 w-full"
+        (click)="submitData()"
+      >
+        -----> Add ----->
+      </button>
+    </div>
+    <mat-card class="w-45pct m-auto h-90pct mx-auto">
+      <app-postlist [posts]="data" />
+    </mat-card>
+  </div>
+</div>
