@@ -1,0 +1,43 @@
+<form (submit)="submitData(postForm)" #postForm="ngForm">
+  <mat-card class="w-full m-auto h-96 mx-auto first-card">
+    <mat-card-header>
+      <mat-card-title
+        ><a href="https://genius.com/3957024" target="_blank"
+          >Doctor Doolittle, what's your secret?</a
+        ></mat-card-title
+      >
+      <mat-card-subtitle
+        >New Post ID: {{ postCount }}</mat-card-subtitle
+      ></mat-card-header
+    >
+    <mat-card-content>
+      <mat-form-field class="w-full">
+        <!-- <textarea
+          matInput
+          rows="10"
+          [(ngModel)]="binding"
+          class="box-border"
+          name="postContent"
+        ></textarea> This uses 2 way data binding  -->
+        <textarea
+          matInput
+          rows="10"
+          name="postContent"
+          ngModel
+          required
+          #postContent="ngModel"
+        ></textarea>
+        <mat-error *ngIf="postContent.invalid"> Don't keep it</mat-error>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+
+  <button
+    mat-raised-button
+    color="primary"
+    class="relative top-20 mx-auto h-16 submit-button"
+    type="submit"
+  >
+    Give it to me Doctor
+  </button>
+</form>

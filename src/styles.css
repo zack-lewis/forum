@@ -12,6 +12,7 @@ app-postlist {
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
   overflow: hidden;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: rgb(71 85 105);
@@ -19,22 +20,25 @@ body {
 
 mat-card {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   background-color: unset;
+  color: rgb(233, 137, 13);
 }
 
 .left-div {
   display: flex;
   flex-direction: column;
   width: 48%;
-  height: 100%;
-  /* margin-left: auto;
-  margin-right: auto; */
+  /* height: 100%; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .right-div {
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-div {
@@ -48,10 +52,30 @@ mat-card {
 
 .submit-button {
   position: relative;
+  left: 25%;
+  right: 25%;
   width: 50%;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   height: 5rem;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+mat-card-header {
+  margin: 4px;
 }

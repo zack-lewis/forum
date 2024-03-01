@@ -1,18 +1,26 @@
-<mat-accordion multi *ngIf="this.posts.length > 0">
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-description *ngIf="this.posts.length > 1">
-        {{ this.posts.length }} secrets recorded
-      </mat-panel-description>
-      <mat-panel-description *ngIf="this.posts.length == 1">
-        1 secret recorded
-      </mat-panel-description>
-      <mat-panel-description *ngIf="this.posts.length == 0"
-        >No secrets recorded
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <ul *ngFor="let post of posts">
-      <li>{{ post }}</li>
-    </ul>
-  </mat-expansion-panel>
-</mat-accordion>
+<mat-card class="second-card">
+  <mat-card-header *ngIf="this.posts.length > 1">
+    {{ this.posts.length }} secrets recorded
+  </mat-card-header>
+  <mat-card-header *ngIf="this.posts.length == 1">
+    1 secret recorded
+  </mat-card-header>
+  <mat-card-header *ngIf="this.posts.length == 0"
+    >No secrets recorded
+  </mat-card-header>
+  <mat-accordion multi>
+    <mat-expansion-panel *ngFor="let post of posts">
+      <mat-expansion-panel-header
+        >ID: {{ post.id
+        }}<button
+          mat-icon-button
+          color="warn"
+          aria-label="Example icon button with a delete icon"
+        >
+          <mat-icon>delete</mat-icon>
+        </button></mat-expansion-panel-header
+      >
+      {{ post.content }}
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card>
