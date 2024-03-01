@@ -8,18 +8,21 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { FormsModule } from '@angular/forms';
 import { PostComponent } from './post/post.component';
 
-import { MatCardModule } from '@angular/material/card'
-import { MatExpansionModule } from '@angular/material/expansion'
-import { MatButtonModule } from '@angular/material/button'
-import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { PostlistComponent } from './post/postlist/postlist.component'
+import { PostlistComponent } from './post/postlist/postlist.component';
+import { HeadCreateComponent } from './head-create/head-create.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
-    PostlistComponent
+    PostlistComponent,
+    HeadCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,11 +32,10 @@ import { PostlistComponent } from './post/postlist/postlist.component'
     MatExpansionModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule,
   ],
-  providers: [
-    provideAnimationsAsync('noop')
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideAnimationsAsync('noop')],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
