@@ -24,7 +24,7 @@ export class PostCreateComponent {
       // content: this.binding,
     }; // build post data object
     this.dataOut.emit(newPost); // Send data to parent to process
-    form.value.postContent = ''; // Clear text area for next post
+    // form.value.postContent = ''; // Clear text area for next post
     form.controls['postContent'].setValue('');
     // this.binding = '';
   }

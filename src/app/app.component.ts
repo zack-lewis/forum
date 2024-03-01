@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   }
 
   addData(newData: IPost) {
-    console.log('New Data: ', newData);
+    // console.log('New Data: ', newData);
     this.storedData.push(newData);
     this.postCount = this.storedData.length;
     localStorage.setItem('postDataJson', JSON.stringify(this.storedData));
